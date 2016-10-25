@@ -14,6 +14,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        $this->app->resolving(function($object, $class) {
+            \Log::debug('resolving: ' . get_class($object));
+        });
+        $this->app->afterResolving(function($object, $class) {
+            \Log::debug('after resolving: ' . get_class($object));
+        });
     }
 
     /**
