@@ -4,10 +4,17 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/Users/ichikawashingo/dev/laravel-sendgrid-log-driver"
+        }
+    ],
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
-        "s-ichikawa/laravel-sendgrid-driver": "dev-dev"
+        "s-ichikawa/laravel-sendgrid-driver": "dev-dev",
+        "s-ichikawa/laravel-sendgrid-log-driver": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
