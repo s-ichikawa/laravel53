@@ -37,6 +37,11 @@ class StaticCache extends Command
      */
     public function handle()
     {
-        //
+
+    }
+
+    private function getValue()
+    {
+
     }
 }
