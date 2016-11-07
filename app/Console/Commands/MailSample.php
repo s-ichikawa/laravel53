@@ -76,5 +76,7 @@ class MailSample extends Command
                     ],
                 ], 'sendgrid/x-smtpapi');
         });
+
+        var_dump($res);
     }
 }
