@@ -167,7 +167,6 @@ return [
          * Package Service Providers...
          */
         \Sichikawa\LaravelSendgridDriver\MailServiceProvider::class,
-        \Sichikawa\LaravelSendgridLogDriver\MailServiceProvider::class,
         \Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         //
 

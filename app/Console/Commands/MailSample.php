@@ -39,44 +39,24 @@ class MailSample extends Command
      */
     public function handle()
     {
-        $send_date = Carbon::today()->format('Y-m-d');
-        $user = (object)['id' => 123];
-        $res = \Mail::send('emails.sendgrid_sample', [], function (Message $message) use ($user, $send_date) {
+        \Mail::send('emails.embed_body_variable', [], function (Message $message) {
             $message
-                ->subject('This is a test.')
-                ->from('ichikawa.shingo.0829@gmail.com')
+                ->subject('embed subject variable')
+                ->from('ichikawa.shingo.0829@gmail.com', 's-ichikawa')
                 ->to([
                     'ichikawa.shingo.0829@gmail.com',
                 ])
                 ->replyTo('ichikawa.shingo.0829+replyto@gmail.com', 'おれだ！')
                 ->embedData([
-                    'categories'       => ['newsletter_1'],
-                    'custom_args'      => [
-                        'send_date' => $send_date,
-                        'user_id'   => (string)$user->id,
-                    ],
-                    'sandbox' => 1,
                     'personalizations' => [
                         [
-                            'to'            => [
-                                'email' => 'ichikawa.shingo.0829+test1@gmail.com',
-                                'name'  => 'ichikawa1',
-                            ],
-                            'from' => [
-                                'email' => 'ichikawa.shingo.0829@gmail.com'
-                            ],
-                            'subject' => 'subject1',
                             'substitutions' => [
-                                '%fname%' => 'recipient1',
-                            ],
-                            'custom_args'   => [
-                                'custom_args_1' => 'it is 1',
+                                ':myname' => 's-ichikawa',
                             ],
                         ],
                     ],
+                    'template_id'      => '0f35ca1c-db1f-4953-98ab-7aeeb73d1818',
                 ], 'sendgrid/x-smtpapi');
         });
-
-        var_dump($res);
     }
 }
