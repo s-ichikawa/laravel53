@@ -55,7 +55,7 @@ class MailSample extends Command
                             ],
                         ],
                     ],
-                    'template_id'      => '0f35ca1c-db1f-4953-98ab-7aeeb73d1818',
+                    'template_id'      => config('sendgrid.templates.sample'),
                 ], 'sendgrid/x-smtpapi');
         });
     }
