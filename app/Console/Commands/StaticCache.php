@@ -11,7 +11,7 @@ class StaticCache extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'static_cache:sample';
 
     /**
      * The console command description.
@@ -37,11 +37,19 @@ class StaticCache extends Command
      */
     public function handle()
     {
+        $result = $this->getValue(function () {
+            var_dump('test');
+            return 'abc';
+        });
 
+        var_dump($result());
+        var_dump($result());
     }
 
-    private function getValue()
+    private function getValue(callable $func)
     {
-
+        return static function () use ($func) {
+            return $func();
+        };
     }
 }
