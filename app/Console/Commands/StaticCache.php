@@ -38,7 +38,7 @@ class StaticCache extends Command
     public function handle()
     {
         $result = $this->getValue(function () {
-            var_dump('test');
+            var_dump('I just get new iPhone!!');
             return 'abc';
         });
 
