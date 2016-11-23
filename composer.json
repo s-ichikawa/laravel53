@@ -13,7 +13,8 @@
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
-        "s-ichikawa/laravel-sendgrid-driver": "dev-master"
+        "s-ichikawa/laravel-sendgrid-driver": "dev-master",
+        "devster/ubench": "^1.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
