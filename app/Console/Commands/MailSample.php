@@ -55,7 +55,15 @@ class MailSample extends Command
                         ],
                     ],
                     'template_id'      => config('sendgrid.templates.sample'),
+                    'asm'              => [
+                        'group_id' => 5221,
+                        'groups_to_display' => [
+                            5221
+                        ]
+                    ],
                 ], 'sendgrid/x-smtpapi');
         });
+
+
     }
 }
