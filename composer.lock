@@ -1259,12 +1259,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/s-ichikawa/laravel-sendgrid-driver.git",
-                "reference": "40d83bb436719bd3a8ff08e279bb102342c7a122"
+                "reference": "451e51c90054fcfd0c68bb1419d6fd6272430804"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s-ichikawa/laravel-sendgrid-driver/zipball/40d83bb436719bd3a8ff08e279bb102342c7a122",
-                "reference": "40d83bb436719bd3a8ff08e279bb102342c7a122",
+                "url": "https://api.github.com/repos/s-ichikawa/laravel-sendgrid-driver/zipball/451e51c90054fcfd0c68bb1419d6fd6272430804",
+                "reference": "451e51c90054fcfd0c68bb1419d6fd6272430804",
                 "shasum": ""
             },
             "require": {
@@ -1293,7 +1293,7 @@
                 }
             ],
             "description": "This library adds a 'sendgrid' mail driver to Laravel.",
-            "time": "2016-11-17 11:29:03"
+            "time": "2016-12-18 23:37:13"
         },
         {
             "name": "swiftmailer/swiftmailer",
