@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "02521cc31b0cec4c799cda441ff39129",
-    "content-hash": "afdf33dfa8c23f2fce842c231121400d",
+    "hash": "4f91c096bbe455ca19855ebc1c36d733",
+    "content-hash": "5c86b2be10e8d1f6b739d215629da517",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1252,6 +1252,47 @@
                 "uuid"
             ],
             "time": "2016-11-22 19:21:44"
+        },
+        {
+            "name": "s-ichikawa/laravel-line-notify",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "/Users/ichikawashingo/dev/laravel-line-notify",
+                "reference": "6fd567fca0e7a99d12ca5cd9bc8c7aecf24da742",
+                "shasum": null
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.2",
+                "illuminate/notifications": "^5.3",
+                "illuminate/support": "^5.3",
+                "php": ">=5.6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NotificationChannels\\LineNotify\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "NotificationChannels\\LineNotify\\Test\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "s-ichikawa",
+                    "email": "ichikawa.shingo.0829@gmail.com"
+                }
+            ]
         },
         {
             "name": "s-ichikawa/laravel-sendgrid-driver",
@@ -3930,7 +3971,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "s-ichikawa/laravel-sendgrid-driver": 20
+        "s-ichikawa/laravel-sendgrid-driver": 20,
+        "s-ichikawa/laravel-line-notify": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

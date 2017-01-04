@@ -8,13 +8,18 @@
         {
             "type": "path",
             "url": "/Users/ichikawashingo/dev/laravel-sendgrid-log-driver"
+        },
+        {
+            "type": "path",
+            "url": "/Users/ichikawashingo/dev/laravel-line-notify"
         }
     ],
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
         "s-ichikawa/laravel-sendgrid-driver": "dev-master",
-        "devster/ubench": "^1.2"
+        "devster/ubench": "^1.2",
+        "s-ichikawa/laravel-line-notify": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
