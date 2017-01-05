@@ -38,7 +38,9 @@ class MailSample extends Command
      */
     public function handle()
     {
-        \Mail::send('emails.embed_body_variable', [], function (Message $message) {
+        $filename = resource_path('docs/license.txt');
+
+        \Mail::send('emails.embed_body_variable', [], function (Message $message) use ($filename) {
             $message
                 ->subject('embed subject variable')
                 ->from('ichikawa.shingo.0829@gmail.com', 's-ichikawa')
@@ -56,10 +58,16 @@ class MailSample extends Command
                     ],
                     'template_id'      => config('sendgrid.templates.sample'),
                     'asm'              => [
-                        'group_id' => 5221,
+                        'group_id'          => 5221,
                         'groups_to_display' => [
-                            5221
-                        ]
+                            5221,
+                        ],
+                    ],
+                    'attachments'      => [
+                        [
+                            'content'  => base64_encode(file_get_contents($filename)),
+                            'filename' => basename($filename),
+                        ],
                     ],
                 ], 'sendgrid/x-smtpapi');
         });
