@@ -2,7 +2,10 @@
 
 namespace App\Console\Commands;
 
+use App\Conversion;
+use App\Notifications\ConfirmOrder;
 use Illuminate\Console\Command;
+use NotificationChannels\LineNotify\LineNotifyMessage;
 
 class LineNotify extends Command
 {
@@ -37,6 +40,8 @@ class LineNotify extends Command
      */
     public function handle()
     {
+        $conversion = new Conversion();
 
+        $conversion->notify(new ConfirmOrder());
     }
 }
