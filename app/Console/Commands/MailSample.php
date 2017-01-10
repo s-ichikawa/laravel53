@@ -40,7 +40,9 @@ class MailSample extends Command
     {
         $filename = resource_path('docs/license.txt');
 
-        \Mail::send('emails.embed_body_variable', [], function (Message $message) use ($filename) {
+        \Mail::send('emails.embed_body_variable', [
+            'img_src' => resource_path('docs/sendgrid.png')
+        ], function (Message $message) use ($filename) {
             $message
                 ->subject('embed subject variable')
                 ->from('ichikawa.shingo.0829@gmail.com', 's-ichikawa')
@@ -69,7 +71,8 @@ class MailSample extends Command
                             'filename' => basename($filename),
                         ],
                     ],
-                ], 'sendgrid/x-smtpapi');
+                ], 'sendgrid/x-smtpapi')
+            ;
         });
 
 
