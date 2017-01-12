@@ -17,7 +17,7 @@
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
-        "s-ichikawa/laravel-sendgrid-driver": "dev-master",
+        "s-ichikawa/laravel-sendgrid-driver": "dev-dev",
         "devster/ubench": "^1.2",
         "s-ichikawa/laravel-line-notify": "dev-master",
         "barryvdh/laravel-ide-helper": "^2.2"
