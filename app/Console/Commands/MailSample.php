@@ -50,7 +50,7 @@ class MailSample extends Command
                     'ichikawa.shingo.0829@gmail.com',
                 ])
                 ->replyTo('ichikawa.shingo.0829+replyto@gmail.com', 'おれだ！')
-                ->embedData([
+                ->embedData(json_encode([
                     'personalizations' => [
                         [
                             'substitutions' => [
@@ -71,7 +71,7 @@ class MailSample extends Command
                             'filename' => basename($filename),
                         ],
                     ],
-                ], 'sendgrid/x-smtpapi')
+                ]), 'sendgrid/x-smtpapi')
             ;
         });
 
