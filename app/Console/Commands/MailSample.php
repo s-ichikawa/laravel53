@@ -49,7 +49,7 @@ class MailSample extends Command
                 ->to([
                     'ichikawa.shingo.0829@gmail.com',
                 ])
-                ->replyTo('ichikawa.shingo.0829+replyto@gmail.com', 'おれだ！')
+                ->replyTo('test@gmail.com', 'おれだ！')
                 ->embedData(json_encode([
                     'personalizations' => [
                         [
